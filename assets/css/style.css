@@ -2,8 +2,8 @@
 
 * {
     margin: 0;
-    border: 0;
     padding: none;
+    border: 0;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     color: #3a3a3a;
 }
 
-/* heading and logo */
+/* headings and logo */
 
 h1, h2 {
     font-family: Oswald, sans-serif;
@@ -25,6 +25,8 @@ h1, h2 {
     float: left;
     font-size: 280%;
 }
+
+/* navigation link */
 
 #menu {
     font-size: 110%;
@@ -48,4 +50,37 @@ h1, h2 {
 
 #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* hero image */
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center; 
+
+}#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the levels of zoom for hero-image */
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
